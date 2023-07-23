@@ -1,0 +1,10 @@
+SELECT
+  e.employee_id,
+  e.first_name,
+  d.department_name
+FROM
+  hr.employees e
+JOIN
+  hr.departments d
+ON
+  e.department_id = d.department_id;

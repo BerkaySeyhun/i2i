@@ -1,0 +1,36 @@
+-- Create a table from HR.EMPLOYEES table
+CREATE TABLE MY_EMP AS
+SELECT
+  employee_id,
+  last_name,
+  first_name,
+  email,
+  phone_number,
+  salary
+FROM
+  hr.employees;
+
+-- Insert a new row to MY_EMP table
+INSERT INTO MY_EMP (employee_id, last_name, first_name, email, phone_number, salary)
+VALUES (1905, 'Seyhun', 'Berkay', 'berkay@i2i.com', '530-999-1905', 27000);
+
+-- Update the phone number and salary of the new row
+UPDATE MY_EMP
+SET
+  phone_number = '530-999-1905',
+  salary = 35000
+WHERE
+  employee_id = 1905;
+
+-- Delete the new row
+DELETE FROM MY_EMP
+WHERE
+  employee_id = 1905;
+
+-- Display the MY_EMP table
+SELECT *
+FROM
+  MY_EMP;
+
+-- Drop the MY_EMP table
+DROP TABLE MY_EMP;

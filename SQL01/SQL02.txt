@@ -1,0 +1,5 @@
+SELECT
+  employee_id,
+  manager_id
+FROM
+  hr.employees;
