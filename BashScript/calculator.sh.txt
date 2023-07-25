@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Ask for calculation operand
+echo "Select calculation operand:"
+echo "+ (addition)"
+echo "- (subtraction)"
+echo "* (multiplication)"
+echo "/ (division)"
+echo "% (modulo)"
+echo "! (factorial)"
+read operand
+
+# Ask for input numbers
+if [ "$operand" = "!" ]; then
+  echo "Enter number for factorial:"
+  read number
+  factorial=$((1))
+  for i in $(seq 2 $number); do
+    factorial=$((factorial * i))
+  done
+else
+  echo "Enter first number:"
+  read first_number
+  echo "Enter second number:"
+  read second_number
+fi
+
+# Calculate result
+case $operand in
+  "+" )
+    result=$((first_number + second_number))
+    ;;
+  "-" )
+    result=$((first_number - second_number))
+    ;;
+  "*" )
+    result=$((first_number * second_number))
+    ;;
+  "/" )
+    result=$((first_number / second_number))
+    ;;
+  "%" )
+    result=$((first_number % second_number))
+    ;;
+  "!" )
+    result=$factorial
+    ;;
+esac
+
+# Print result
+echo "Result: $result"
