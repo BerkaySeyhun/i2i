@@ -1,0 +1,32 @@
+# Create a new repository on GitHub called `i2i`
+git init i2i
+
+# Clone the repository to your local machine
+git clone i2i
+
+# Create a file called `Git Example`
+echo "This is a Git example." > Git Example
+
+# Add the file to the staging area
+git add Git Example
+
+# Commit the changes to the `master` branch
+git commit -m "Added a Git example."
+
+# Create a new branch called `r2.5.4.1-bugfix`
+git checkout -b r2.5.4.1-bugfix
+
+# Make the necessary changes to the `Git Example` file to fix the bug
+# (open the file in your text editor and make the necessary changes)
+
+# Add the file to the staging area
+git add Git Example
+
+# Commit the changes to the `r2.5.4.1-bugfix` branch
+git commit -m "Fixed a bug in the Git example."
+
+# Merge the `r2.5.4.1-bugfix` branch into the `master` branch
+git merge r2.5.4.1-bugfix
+
+# Push the changes to the remote repository
+git push origin master
