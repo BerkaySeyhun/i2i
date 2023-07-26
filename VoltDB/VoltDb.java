@@ -6,7 +6,7 @@ public class VoltDb {
 
     public static void main(String[] args){
         // Create a VoltDB connection
-        VoltDBClient client = new VoltDBClient("localhost", 21212);
+        VoltDBClient client = new VoltDBClient("localhost", 32768); // 21212
 
         // Create the SUBSCRIBER table
         String sql = "CREATE TABLE SUBSCRIBER(SUBSC_ID NUMBER, SUBSC_NAME VARCHAR(100), SUBSC_SURNAME VARCHAR(100), MSISDN VARCHAR(100), TARIFF_ID NUMBER, START_DATE DATE)";
